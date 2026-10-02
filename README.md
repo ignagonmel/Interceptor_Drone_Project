@@ -12,6 +12,7 @@ An end-to-end **Guidance, Navigation, and Control (GNC)** simulation framework f
 * **Continuous Collision Detection (CCD)**: Ray-segment distance projection algorithm preventing physical tunneling effects at high intercept velocities ($>25\text{ m/s}$).
 * **ROS 2 & Gazebo Integration**: Real-time simulation environment using ROS 2 communication nodes, custom QoS profiles, and Gazebo entity state services.
 * **Material Folder**: Contains explained maths and sketches in spanish. Also gazebo simulation videos.
+* **3D Drones Geometry**: Not included in tis repo. Recommended to download it and load following `sim_launch.py`.
 
 ---
 
@@ -19,8 +20,8 @@ An end-to-end **Guidance, Navigation, and Control (GNC)** simulation framework f
 
 
 ```text
-		   +-----------------------------------+
-                   |    Gazebo Simulation Environment   |
+				   +-----------------------------------+
+                   |    Gazebo Simulation Environment  |
                    +-----------------------------------+
                                |             ^
          Noisy Position        |             | SetEntityState
@@ -45,7 +46,7 @@ An end-to-end **Guidance, Navigation, and Control (GNC)** simulation framework f
 * **Velocity Estimation**: Low-pass Exponential Moving Average (EMA) filter derives smooth target velocity vectors ($\mathbf{v}_t$) from finite differences.
 
 ### 2. Guidance ($G$)
-* **3D PNG Law**: Computes commanded acceleration ($\mathbf{a}_{cmd}$) based on Line of Sight (LOS) angular rate ($\mathbf{\Omega}_{LOS}$) and closing velocity ($v_{closing}$).
+* **3D PNG Law**: Computes commanded acceleration ($\mathbf{a}\_{\text{cmd}}$) based on Line of Sight (LOS) angular rate ($\mathbf{\Omega}\_{\text{LOS}}$) and closing velocity ($v\_{\text{closing}}$).
 * **Pursuit Vector**: Blends proportional navigation acceleration ($\mathbf{a}_{PN}$) with a direct pursuit vector to guarantee trajectory convergence.
 
 ### 3. Control ($C$)
@@ -109,7 +110,7 @@ source install/setup.bash
 ---
 
 
-##🎬 Execution Guide
+## 🎬 Execution Guide
 **Launch the simulation pipeline using 4 independent terminals**:
 
 **Terminal 1: Launch Gazebo Environment**
