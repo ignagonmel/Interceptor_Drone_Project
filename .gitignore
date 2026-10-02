@@ -1,0 +1,35 @@
+# ROS 2 Build, Install, and Log artifacts
+build/
+install/
+log/
+
+# Python compiled binaries & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+*.pyc
+
+# C++ Object & Compiled files
+*.o
+*.so
+*.dylib
+*.a
+
+# Gazebo / Simulation logs & state
+*.log
+*.sdf.bak
+
+# IDE & OS Specific files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# CMake build outputs (if built outside colcon)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile

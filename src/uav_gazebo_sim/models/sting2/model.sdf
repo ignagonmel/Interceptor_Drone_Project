@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="sting2">
+    <static>false</static>
+    <link name="link">
+      <gravity>0</gravity>
+      <inertial>
+        <mass>15.0</mass>
+        <inertia>
+          <ixx>1.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+          <iyy>1.0</iyy><iyz>0.0</iyz>
+          <izz>0.5</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.15</radius>
+            <length>0.8</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://sting2/meshes/sting.dae</uri>
+            <scale>0.33 0.33 0.33</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

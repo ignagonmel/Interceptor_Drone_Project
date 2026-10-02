@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="shahed136">
+    <static>false</static>
+    <link name="link">
+      <gravity>0</gravity>
+      <inertial>
+        <mass>200.0</mass>
+        <inertia>
+          <ixx>15.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+          <iyy>15.0</iyy><iyz>0.0</iyz>
+          <izz>20.0</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>3.2 2.5 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 1.5708 0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://shahed136/meshes/shahed.dae</uri>
+            <scale>2.5 2.5 2.5</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
